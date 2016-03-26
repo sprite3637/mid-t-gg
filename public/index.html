@@ -2,102 +2,97 @@
 <html lang="en" ng-app= "book">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-  <!-- <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/> -->
   <title>BannineJin</title>
-
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script src="js/materialize.min.js"></script>
   <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.2/angular.min.js"></script>
   <script src="js/app.js"></script>
-
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 </head>
 <body ng-controller="Controller">
   <div class="navbar-fixed">
-  <nav class="#424242 grey darken-3" >
-    <div class="nav-wrapper container">
-      <a href="index.html" class="brand-logo"><i class="material-icons left">store</i>บ้านนายจิน</a>
-         <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons modal-trigger" data-target="modal1">store</i><div ng-show = "sumA > 0" class="badge">{{sumA}}</div></a>
+    <nav class="#424242 grey darken-3" style="opacity:0.9;">
+      <div class="nav-wrapper container">
+        <a href="#!" class="brand-logo"><img class="responsive-img" src="images/prite.png"></a>
+        <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons modal-trigger" data-target="modal1">shopping_basket</i><span class="new badge #f44336 red" ng-show = "sumA>0">{{sumA}}</span></a>
 
-    <ul  class="right hide-on-med-and-down">
-      <li>
-        <button class="btn-large waves-effect waves-light modal-trigger #2979ff blue accent-3" data-target="modal1">
-        <i class="material-icons left">shopping_basket</i>ตระกร้า
-        <li ng-show = "sumA>0"><a href="#!"><span class="new badge">{{sumA}}</span></a></li>
-        </button>
-      </li>
-    </ul>
+        <ul class="right hide-on-med-and-down">
+          <li>
+            <button class="btn-large waves-effect waves-light modal-trigger #2979ff blue accent-3" data-target="modal1">
+            <i class="material-icons left">shopping_basket</i>ตระกร้า
+            <li ng-show = "sumA>0"><a href="#!"><span class="new badge #f44336 red">{{sumA}}</span></a></li>
+            </button>
+          </li>
+        </ul>
+      </div>
+    </nav>
   </div>
-</nav>
-</div>
 
   <div class="##64b5f6 blue lighten-2">
-  <div class="container #e3f2fd blue lighten-5 ">
-    <div class="row">
-      <div class="col s12 m3">
-        <p class="z-depth-5"><img class="materialboxed" width="100%" height="200% " src="images/harry1.jpg"></p>
-        <div class="brand-logo center"><h5>100 ฿</h5>
-        <button ng-click="add({price : 100, sector : 'sec1', amount : 1, id : 'The Sorcerer is Stone Sector 1'})"
-        class="waves-effect waves-light btn #b388ff deep-purple accent-1">select<i class="material-icons right">library_add</i>
-        </button>
-        </div>
-      </div>
-      <div class="col s12 m3">
-        <p class="z-depth-5"><img class="materialboxed" width="100%" height="200%" src="images/harry2.jpg"></p>
-        <div class="brand-logo center"><h5>100 ฿</h5>
-        <button ng-click="add({price : 100, sector : 'sec2', amount : 1, id : 'The Chamber of Secrets Sector 2'})"
-        class="waves-effect waves-light btn #ffa000 amber darken-2">select<i class="material-icons right">library_add</i>
-        </button>
-        </div>
-      </div>
-      <div class="col s12 m3">
-        <p class="z-depth-5"><img class="materialboxed" width="100%" height="200%" src="images/harry3.jpg"></p>
-        <div class="brand-logo center"><h5>100 ฿</h5>
-        <button ng-click="add({price : 100, sector : 'sec3', amount : 1, id : 'The Prisoner of Azkaban Sector 3'})"
-        class="waves-effect waves-light btn #3949ab indigo darken-1">select<i class="material-icons right">library_add</i>
-        </button>
-        </div>
-      </div>
-      <div class="col s12 m3">
-        <p class="z-depth-5"><img class="materialboxed" width="100%" height="200%" src="images/harry4.jpg"></p>
-        <div class="brand-logo center"><h5>100 ฿</h5>
-        <button ng-click="add({price : 100, sector : 'sec4', amount : 1, id : 'The Goblet of Fire Sector 4'})"
-        class="waves-effect waves-light btn #afb42b lime darken-2">select<i class="material-icons right">library_add</i>
-        </button>
-        </div>
-      </div>
-    </div>
+    <div class="container #e3f2fd blue lighten-5">
       <div class="row">
-      <div class="col s12 m3">
-        <p class="z-depth-5"><img class="materialboxed" width="100%" height="200%" src="images/harry5.jpg"></p>
-        <div class="brand-logo center"><h5>100 ฿</h5>
-        <button ng-click="add({price : 100, sector : 'sec5', amount : 1, id : 'The Order of The Phoenix Sector 5'})"
-        class="waves-effect waves-light btn #757575 grey darken-1">select<i class="material-icons right">library_add</i>
-        </button>
+        <div class="col s12 m3">
+          <p class="z-depth-5"><img class="materialboxed" width="100%" height="200% " src="images/harry1.jpg"></p>
+          <div class="brand-logo center"><h5>100 ฿</h5>
+            <button ng-click="add({price : 100, sector : 'sec1', amount : 1, id : 'The Sorcerer is Stone Sector 1'})"
+              class="waves-effect waves-light btn #b388ff deep-purple accent-1">select<i class="material-icons right">library_add</i>
+            </button>
+          </div>
+        </div>
+        <div class="col s12 m3">
+          <p class="z-depth-5"><img class="materialboxed" width="100%" height="200%" src="images/harry2.jpg"></p>
+          <div class="brand-logo center"><h5>100 ฿</h5>
+            <button ng-click="add({price : 100, sector : 'sec2', amount : 1, id : 'The Chamber of Secrets Sector 2'})"
+              class="waves-effect waves-light btn #ffa000 amber darken-2">select<i class="material-icons right">library_add</i>
+            </button>
+          </div>
+        </div>
+        <div class="col s12 m3">
+          <p class="z-depth-5"><img class="materialboxed" width="100%" height="200%" src="images/harry3.jpg"></p>
+          <div class="brand-logo center"><h5>100 ฿</h5>
+            <button ng-click="add({price : 100, sector : 'sec3', amount : 1, id : 'The Prisoner of Azkaban Sector 3'})"
+              class="waves-effect waves-light btn #3949ab indigo darken-1">select<i class="material-icons right">library_add</i>
+            </button>
+          </div>
+        </div>
+        <div class="col s12 m3">
+          <p class="z-depth-5"><img class="materialboxed" width="100%" height="200%" src="images/harry4.jpg"></p>
+          <div class="brand-logo center"><h5>100 ฿</h5>
+            <button ng-click="add({price : 100, sector : 'sec4', amount : 1, id : 'The Goblet of Fire Sector 4'})"
+              class="waves-effect waves-light btn #afb42b lime darken-2">select<i class="material-icons right">library_add</i>
+            </button>
+          </div>
         </div>
       </div>
-      <div class="col s12 m3">
-        <p class="z-depth-5"><img class="materialboxed" width="100%" height="200%" src="images/harry6.jpg"></p>
-        <div class="brand-logo center"><h5>100 ฿</h5>
-        <button ng-click="add({price : 100, sector : 'sec6', amount : 1, id : 'The Half-Blood Prince Sector 6'})"
-        class="waves-effect waves-light btn #00acc1 cyan darken-1">select<i class="material-icons right">library_add</i>
-        </button>
+      <div class="row">
+        <div class="col s12 m3">
+          <p class="z-depth-5"><img class="materialboxed" width="100%" height="200%" src="images/harry5.jpg"></p>
+          <div class="brand-logo center"><h5>100 ฿</h5>
+            <button ng-click="add({price : 100, sector : 'sec5', amount : 1, id : 'The Order of The Phoenix Sector 5'})"
+              class="waves-effect waves-light btn #757575 grey darken-1">select<i class="material-icons right">library_add</i>
+            </button>
+          </div>
         </div>
-      </div>
-      <div class="col s12 m3">
-        <p class="z-depth-5"><img class="materialboxed" width="100%" height="200%" src="images/harry7.jpg"></p>
-        <div class="brand-logo center"><h5>100 ฿</h5>
-        <button ng-click="add({price : 100, sector : 'sec7', amount : 1, id : 'The Deathly Hallows Sector 7'})"
-        class="waves-effect waves-light btn #ff6e40 deep-orange accent-2">select<i class="material-icons right">library_add</i>
-        </button>
+        <div class="col s12 m3">
+          <p class="z-depth-5"><img class="materialboxed" width="100%" height="200%" src="images/harry6.jpg"></p>
+          <div class="brand-logo center"><h5>100 ฿</h5>
+            <button ng-click="add({price : 100, sector : 'sec6', amount : 1, id : 'The Half-Blood Prince Sector 6'})"
+              class="waves-effect waves-light btn #00acc1 cyan darken-1">select<i class="material-icons right">library_add</i>
+            </button>
+          </div>
         </div>
-      </div>
+        <div class="col s12 m3">
+          <p class="z-depth-5"><img class="materialboxed" width="100%" height="200%" src="images/harry7.jpg"></p>
+          <div class="brand-logo center"><h5>100 ฿</h5>
+            <button ng-click="add({price : 100, sector : 'sec7', amount : 1, id : 'The Deathly Hallows Sector 7'})"
+              class="waves-effect waves-light btn #ff6e40 deep-orange accent-2">select<i class="material-icons right">library_add</i>
+            </button>
+          </div>
+        </div>
       </div>
     </div>
-</div>
-
+  </div>
 <!-- Modal -->
   <div class="modal" id="modal1">
     <div class="modal-content">
@@ -114,18 +109,18 @@
         </div>
       </div>
       <div class="row" ng-repeat="show in bookOrder">
-        <div class="col s5 m7 l8">
+        <div class="col s4 m7 l8">
           <h6>{{show.id}}</h6>
         </div>
         <div class="col s1 m1 l1">
           <h6>{{show.amount}}</h6>
         </div>
-        <div class="col s6 m4 l3">
+        <div class="col s7 m4 l3">
           <a href="" ng-click="delOrder($index)"><i class="material-icons left">fast_rewind</i></a>
           <a href="" ng-click="addOrder($index)"><i class="material-icons left">fast_forward</i></a>
           <a href="" ng-click="deleteOrder($index)"><i class="material-icons left">delete</i></a>
        </div>
-     </div>
+      </div>
       <hr>
       <div class="row" ng-show="sumA>0">
         <div class="col s7 m10">
