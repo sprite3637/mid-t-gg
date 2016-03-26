@@ -15,7 +15,7 @@
     <nav class="#424242 grey darken-3" style="opacity:0.9;">
       <div class="nav-wrapper container">
         <a href="#!" class="brand-logo"><img class="responsive-img" src="images/prite.png"></a>
-        <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons modal-trigger" data-target="modal1">shopping_basket</i><span class="new badge #f44336 red" ng-show = "sumA>0">{{sumA}}</span></a>
+        <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons modal-trigger" data-target="modal1" >shopping_basket</i><span class="new badge #f44336 red" ng-show = "sumA>0">{{sumA}}</span></a>
 
         <ul class="right hide-on-med-and-down">
           <li>
@@ -35,7 +35,7 @@
         <div class="col s12 m3">
           <p class="z-depth-5"><img class="materialboxed" width="100%" height="200% " src="images/harry1.jpg"></p>
           <div class="brand-logo center"><h5>100 ฿</h5>
-            <button ng-click="add({price : 100, sector : 'sec1', amount : 1, id : 'The Sorcerer is Stone Sector 1'})"
+            <button id="sec1" ng-click="add({price : 100, sector : 'sec1', amount : 1, id : 'The Sorcerer is Stone Sector 1'})"
               class="waves-effect waves-light btn #b388ff deep-purple accent-1">select<i class="material-icons right">library_add</i>
             </button>
           </div>
@@ -43,7 +43,7 @@
         <div class="col s12 m3">
           <p class="z-depth-5"><img class="materialboxed" width="100%" height="200%" src="images/harry2.jpg"></p>
           <div class="brand-logo center"><h5>100 ฿</h5>
-            <button ng-click="add({price : 100, sector : 'sec2', amount : 1, id : 'The Chamber of Secrets Sector 2'})"
+            <button id="sec2" ng-click="add({price : 100, sector : 'sec2', amount : 1, id : 'The Chamber of Secrets Sector 2'})"
               class="waves-effect waves-light btn #ffa000 amber darken-2">select<i class="material-icons right">library_add</i>
             </button>
           </div>
@@ -51,7 +51,7 @@
         <div class="col s12 m3">
           <p class="z-depth-5"><img class="materialboxed" width="100%" height="200%" src="images/harry3.jpg"></p>
           <div class="brand-logo center"><h5>100 ฿</h5>
-            <button ng-click="add({price : 100, sector : 'sec3', amount : 1, id : 'The Prisoner of Azkaban Sector 3'})"
+            <button id="sec3" ng-click="add({price : 100, sector : 'sec3', amount : 1, id : 'The Prisoner of Azkaban Sector 3'})"
               class="waves-effect waves-light btn #3949ab indigo darken-1">select<i class="material-icons right">library_add</i>
             </button>
           </div>
@@ -59,7 +59,7 @@
         <div class="col s12 m3">
           <p class="z-depth-5"><img class="materialboxed" width="100%" height="200%" src="images/harry4.jpg"></p>
           <div class="brand-logo center"><h5>100 ฿</h5>
-            <button ng-click="add({price : 100, sector : 'sec4', amount : 1, id : 'The Goblet of Fire Sector 4'})"
+            <button id="sec4" ng-click="add({price : 100, sector : 'sec4', amount : 1, id : 'The Goblet of Fire Sector 4'})"
               class="waves-effect waves-light btn #afb42b lime darken-2">select<i class="material-icons right">library_add</i>
             </button>
           </div>
@@ -69,7 +69,7 @@
         <div class="col s12 m3">
           <p class="z-depth-5"><img class="materialboxed" width="100%" height="200%" src="images/harry5.jpg"></p>
           <div class="brand-logo center"><h5>100 ฿</h5>
-            <button ng-click="add({price : 100, sector : 'sec5', amount : 1, id : 'The Order of The Phoenix Sector 5'})"
+            <button id="sec5" ng-click="add({price : 100, sector : 'sec5', amount : 1, id : 'The Order of The Phoenix Sector 5'})"
               class="waves-effect waves-light btn #757575 grey darken-1">select<i class="material-icons right">library_add</i>
             </button>
           </div>
@@ -77,7 +77,7 @@
         <div class="col s12 m3">
           <p class="z-depth-5"><img class="materialboxed" width="100%" height="200%" src="images/harry6.jpg"></p>
           <div class="brand-logo center"><h5>100 ฿</h5>
-            <button ng-click="add({price : 100, sector : 'sec6', amount : 1, id : 'The Half-Blood Prince Sector 6'})"
+            <button id="sec6" ng-click="add({price : 100, sector : 'sec6', amount : 1, id : 'The Half-Blood Prince Sector 6'})"
               class="waves-effect waves-light btn #00acc1 cyan darken-1">select<i class="material-icons right">library_add</i>
             </button>
           </div>
@@ -85,7 +85,7 @@
         <div class="col s12 m3">
           <p class="z-depth-5"><img class="materialboxed" width="100%" height="200%" src="images/harry7.jpg"></p>
           <div class="brand-logo center"><h5>100 ฿</h5>
-            <button ng-click="add({price : 100, sector : 'sec7', amount : 1, id : 'The Deathly Hallows Sector 7'})"
+            <button id="sec7" ng-click="add({price : 100, sector : 'sec7', amount : 1, id : 'The Deathly Hallows Sector 7'})"
               class="waves-effect waves-light btn #ff6e40 deep-orange accent-2">select<i class="material-icons right">library_add</i>
             </button>
           </div>
@@ -118,23 +118,29 @@
         <div class="col s7 m4 l3">
           <a href="" ng-click="delOrder($index)"><i class="material-icons left">fast_rewind</i></a>
           <a href="" ng-click="addOrder($index)"><i class="material-icons left">fast_forward</i></a>
-          <a href="" ng-click="deleteOrder($index)"><i class="material-icons left">delete</i></a>
+          <a href="" id="del{{$index}}" ng-click="deleteOrder($index)"><i class="material-icons left">delete</i></a>
        </div>
       </div>
       <hr>
       <div class="row" ng-show="sumA>0">
         <div class="col s7 m10">
+          ราคารวม
+        </div>
+        <div class="col s5 m2">
+          {{sum.price}} ฿
+        </div>
+        <div class="col s7 m10">
           ส่วนลด
         </div>
         <div class="col s5 m2">
-          {{sum.disCount}} ฿
+          <a id="dis">{{sum.disCount}}</a> ฿
         </div>
         <br>
         <div class="col s7 m10">
           ราคารวมสุทธิ
         </div>
         <div class="col s5 m2">
-          {{sum.sum}} ฿
+          <a id="sum">{{sum.sum}}</a> ฿
         </div>
       </div>
     </div>
